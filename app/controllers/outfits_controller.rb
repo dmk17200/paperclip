@@ -40,7 +40,7 @@ class OutfitsController < ApplicationController
   # POST /outfits
   # POST /outfits.json
   def create
-    @outfit = Outfit.new(params[:outfit])
+    @outfit = Outfit.create(params[:outfit])
 
     respond_to do |format|
       if @outfit.save
