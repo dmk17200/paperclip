@@ -6,5 +6,5 @@ class Outfit < ActiveRecord::Base
   :storage => :s3,
   :s3_credentials => "#{Rails.root}/config/s3.yml",
   :path => ":attachment/:id/:style/:basename.:extension",
-  :bucket => "phototest"
+  :bucket => "danish-webdevclass-shoppingapp-phototest"
 end
