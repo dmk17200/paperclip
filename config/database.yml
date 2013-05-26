@@ -3,7 +3,10 @@
 #
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
+
 development:
+  access_key_id: AKIAJXDQXTPSQT7FMI6A
+  secret_access_key: bN10WnMRwfi0+zeI7P1/VI19Be/W//vqdUrQpbxm
   adapter: sqlite3
   database: db/development.sqlite3
   pool: 5

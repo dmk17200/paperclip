@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'aws-s3'
+gem 'aws-sdk'
+
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 gem 'rails', '3.2.13'

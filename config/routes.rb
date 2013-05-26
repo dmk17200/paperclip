@@ -1,5 +1,6 @@
 Phototest::Application.routes.draw do
   resources :outfits
+  root :to => "outfits#show"
 
 
   # The priority is based upon order of creation:
