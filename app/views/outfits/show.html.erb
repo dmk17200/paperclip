@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b>Image Name:</b>
   <%= @outfit.name %>
 </p>
 
@@ -10,7 +10,7 @@
     <%= @outfit.description %>
 </p>
 
-<%= image_tag @outfit.photo.url %>
+<%= image_tag @outfit.photo.url (:medium) %>
 
 <%= link_to 'Edit', edit_outfit_path(@outfit) %> |
 <%= link_to 'Back', outfits_path %>

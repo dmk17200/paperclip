@@ -17,6 +17,22 @@
     <%= f.label :description %><br />
     <%= f.text_field :description %>
   </div>
+  <div class="field">
+    <%= f.label "Your Name" %><br />
+    <%= f.text_field :username %>
+  </div>
+    <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email %>
+  </div>
+    <div class="field">
+    <%= f.label :style %><br />
+    <%= f.text_field :style %>
+  </div>
+    <div class="field">
+    <%= f.hidden_field :approval, :value=>false %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

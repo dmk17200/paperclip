@@ -1,6 +1,16 @@
 Phototest::Application.routes.draw do
+  resources :admins
+
+
+  resources :users
+
   resources :outfits
+
   root to: 'outfits#new'
+
+  get '/sessions/new' => 'Sessions#new', as: 'new_session'
+  post '/sessions' => 'Sessions#create', as: 'sessions'
+  delete '/sessions' => 'Sessions#destoy'
 
 
   # The priority is based upon order of creation:

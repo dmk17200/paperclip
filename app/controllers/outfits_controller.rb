@@ -2,7 +2,11 @@ class OutfitsController < ApplicationController
   # GET /outfits
   # GET /outfits.json
   def index
-    @outfits = Outfit.all
+    if session[:admin_id].present?
+      @outfits = Outfit.all
+    else
+      @outfits = Outfit.where(:approval => true)
+    end
 
     respond_to do |format|
       format.html # index.html.erb
