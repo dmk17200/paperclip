@@ -11,13 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130601223855) do
+ActiveRecord::Schema.define(:version => 20130602203331) do
 
   create_table "admins", :force => true do |t|
     t.string   "name"
     t.string   "password_digest"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "article"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "elements", :force => true do |t|
+    t.string   "article"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "outfits", :force => true do |t|
@@ -33,6 +45,13 @@ ActiveRecord::Schema.define(:version => 20130601223855) do
     t.string   "email"
     t.string   "style"
     t.boolean  "approval"
+  end
+
+  create_table "pieces", :force => true do |t|
+    t.integer  "outfit_id"
+    t.integer  "element_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "users", :force => true do |t|

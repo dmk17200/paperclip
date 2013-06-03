@@ -1,4 +1,12 @@
 class AdminsController < ApplicationController
+
+  before_filter :authorize_user, only: [:index, :show, :new, :update, :destroy]
+
+  def authorize_user
+    unless session[:admin_id].present?
+      redirect_to new_session_url, notice: "Need to be an admin"
+    end
+  end
   # GET /admins
   # GET /admins.json
   def index
@@ -24,7 +32,8 @@ class AdminsController < ApplicationController
   # GET /admins/new
   # GET /admins/new.json
   def new
-    @admin = Admin.new
+
+      @admin = Admin.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -40,7 +49,7 @@ class AdminsController < ApplicationController
   # POST /admins
   # POST /admins.json
   def create
-    @admin = Admin.new(params[:admin])
+      @admin = Admin.new(params[:admin])
 
     respond_to do |format|
       if @admin.save

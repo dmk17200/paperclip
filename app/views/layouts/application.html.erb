@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head> <%= notice %>
+  <% if session[:admin_id].present? %>
+    <%= link_to "Log Out", sessions_url, method: 'delete' %>
+    <% else %>
+    <%= %>
+    <% end %>
   <title>Phototest</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>

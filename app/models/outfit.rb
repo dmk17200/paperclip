@@ -1,4 +1,6 @@
 class Outfit < ActiveRecord::Base
+  has_many :pieces
+
   attr_accessible :description, :name, :username, :email, :style, :approval
   attr_accessible :photo
   has_attached_file :photo,

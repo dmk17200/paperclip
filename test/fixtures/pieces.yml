@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  outfit_id: 1
+  element_id: 1
+
+two:
+  outfit_id: 1
+  element_id: 1

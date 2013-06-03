@@ -11,6 +11,21 @@
 </p>
 
 <%= image_tag @outfit.photo.url (:medium) %>
+<p>
+  <b>Pieces:</b>
+    <% @outfit.pieces.each do |piece| %>
+    <%= piece.element.article %>
+    <% end %>
 
+</p>
+Elements
+        <%= form_tag pieces_url, method: 'post' do %>
+          <%= select_tag :element_id, options_from_collection_for_select(Element.all, :id, :article) %>
+          <%= hidden_field_tag :outfit_id, @outfit.id %>
+          <%= submit_tag "Submit" %>
+        <% end %>
+
+<p>
 <%= link_to 'Edit', edit_outfit_path(@outfit) %> |
 <%= link_to 'Back', outfits_path %>
+</p>
