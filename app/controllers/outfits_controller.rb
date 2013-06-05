@@ -62,6 +62,7 @@ class OutfitsController < ApplicationController
   def update
     @outfit = Outfit.find(params[:id])
 
+
     respond_to do |format|
       if @outfit.update_attributes(params[:outfit])
         format.html { redirect_to @outfit, notice: 'Outfit was successfully updated.' }

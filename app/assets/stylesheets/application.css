@@ -11,3 +11,536 @@
  *= require_self
  *= require_tree .
  */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+
+
+/* Custom Styles */
+
+
+body {
+  background-color: #ffffff;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 100%;
+}
+
+h2 {
+  font-family: vevey, helvetica, arial, sans-serif;
+  font-size: 1.7em;
+  letter-spacing: 3px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+p {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+a {
+  color: #000000;
+  font-family: helvetica, arial, sans-serif;
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a:active {
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  font-family: helvetica, arial, sans-serif;
+  line-height: 2em;
+}
+
+
+
+/* Fonts */
+
+@font-face {
+  font-family: thiamine;
+  src: url('../fonts/thiamine.ttf');
+}
+
+@font-face {
+  font-family: vevey;
+  src: url('../fonts/vevey.ttf');
+}
+
+/* Header */
+
+header {
+  background-color: #ffffff;
+  padding: 5px;
+  position: fixed;
+    -webkit-box-shadow: 0px 3px 3px 0px #999;
+      box-shadow: 0px 3px 3px 0px #999;
+  width: 100%;
+  z-index: 1000;
+}
+
+h1 {
+  color: #000000;
+  float: left;
+  font-family: thiamine, helvetica, arial, sans-serif;
+  font-size: 4.5em;
+  letter-spacing: 10px;
+  padding: 0 20px;
+  position: relative;
+  top: 5px;
+  text-transform: uppercase;
+}
+
+nav {
+  float: right;
+  padding: 1px 0 0 0;
+  position: relative;
+  top: 15px;
+  width: 270px;
+  vertical-align: text-bottom;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+.navbutton {
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 2px #000;
+  color: #000000;
+  display: inline-block;
+  font-family: vevey, helvetica, arial, sans-serif;
+  font-size: 1.2em;
+  margin: 0 10px;
+  padding: 5.5px 0 0px 0px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  top: 1px;
+  width: 100px;
+}
+
+.navbutton:hover {
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: vevey, helvetica, arial, sans-serif;
+  font-size: 1.2em;
+  margin: 0 10px;
+  width: 100px;
+}
+
+.navbutton:active {
+  color: #ffff00;
+  cursor: pointer;
+  position: relative;
+  text-shadow: 2px 2px #666666;
+  top: 2px;
+}
+
+/* Clearfix */
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+
+/*Intro Page*/
+
+.intro {
+  background: url('../images/stripedpants.jpg') no-repeat;
+  background-size: cover;
+  height: 500px;
+  position: relative;
+  width: 100%;
+}
+
+/*.intro {
+  background: url('../images/stripedpantscropped.jpg') no-repeat;
+  background-size: cover;
+  height: 410px;
+  position: relative;
+  width: 100%;
+}*/
+
+/*pentagon */
+
+.trapezium {
+   border-bottom: 200px solid #ffff00;
+   border-left: 100px solid transparent;
+   border-right: 100px solid transparent;
+   height: 0;
+   margin: 0 auto;
+   opacity:0.7;
+   position: relative;
+   text-align: center;
+   top: 250px;
+   width: 200px;
+}
+
+.triangle {
+   border-top: 100px solid #ffff00;
+   border-left: 200px solid transparent;
+   border-right: 200px solid transparent;
+   height: 0;
+   margin: 0 auto;
+   opacity:0.7;
+   position: relative;
+   top: 250px;
+   width: 0;
+
+}
+
+.downarrow {
+   border-top: 29px solid black;
+   border-left: 47px solid transparent;
+   border-right: 47px solid transparent;
+   height: 0;
+   margin: 0 auto;
+   position: relative;
+   top: 210px;
+   width: 0;
+}
+
+.tagline {
+  font-family: vevey;
+  font-size: 1.9em;
+  letter-spacing: 0px;
+  position: relative;
+  text-align: center;
+  top: 20px;
+}
+
+/*buttons*/
+
+.button {
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 2px #000;
+  color: black;
+  display: block;
+  font-family: vevey, helvetica, arial, sans-serif;
+  margin: 4px auto;
+  padding: 6px 4px 1px 4px;
+  position: relative;
+  top: 25px;
+  font-size: 1.4em;
+  text-decoration: none;
+  width: 130px;
+}
+
+.button:hover {
+  color: #000000;
+  cursor: pointer;
+  display: block;
+  font-family: vevey;
+  font-size: 1.4em;
+  margin: 4px auto;
+  width: 130px;
+}
+
+.button:active {
+  color: #ffff00;
+  cursor: pointer;
+  position: relative;
+  text-shadow: 2px 2px #666666;
+  top: 26px;
+}
+
+/*site summary/description*/
+
+.sitedescription {
+  clear: both;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  top: 100px;
+  width: 70%;
+}
+
+/*main page*/
+
+.featuredlook {
+  background: url('../images/cropsweater.jpg') no-repeat;
+  background-size: cover;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  width: 85%;
+}
+
+.stream {
+  margin: 0 auto;
+  padding: 10px;
+  width: 80%;
+}
+
+.femalelook {
+  background: url('../images/bluecoat.jpg') no-repeat;
+  background-size: cover;
+  float: left;
+  height: 450px;
+  opacity: 0.7;
+  position: relative;
+  width: 50%;
+}
+
+.femalelook:hover {
+  opacity: 1.0;
+}
+
+.malelook {
+  background: url('../images/menswear.jpg') no-repeat;
+  background-size: cover;
+  float: left;
+  height: 450px;
+  opacity: 0.7;
+  position: relative;
+  width: 50%;
+}
+
+.malelook:hover {
+  opacity: 1.0;
+}
+
+.featuredbox {
+  background-color: #ffff00;
+  height: 80px;
+  opacity:0.6;
+  padding: 10px;
+  position: absolute;
+  top: 380px;
+  width: 700px;
+}
+
+.infoboxfemale {
+  background-color: #cccccc;
+  height: 110px;
+  opacity:0.9;
+  padding: 10px;
+  position: absolute;
+  right: 15px;
+  top: 260px;
+  width: 200px;
+}
+
+.infoboxmale {
+  background-color: #cccccc;
+  height: 110px;
+  opacity:0.9;
+  padding: 10px;
+  position: absolute;
+  right: 15px;
+  top: 260px;
+  width: 200px;
+}
+
+
+/*Female Look Full Story*/
+
+.fullinfo {
+  background: url('../images/bluecoat.jpg') no-repeat;
+  background-size: cover;
+  height: 700px;
+  margin: 0 auto;
+  position: relative;
+  top: 80px;
+  width: 80%;
+}
+
+.infocontainer {
+  height: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  top: 80px;
+  width: 70%
+}
+
+/*Submit Page*/
+
+.submitguidelines {
+  font-family: helvetica, arial, sans-serif;
+  font-size: 1.2em;
+  margin: 0 auto;
+  position: relative;
+  top: 100px;
+  width: 50%;
+}
+
+.form {
+  background: #ffffff;
+  height: 650px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  top: 100px;
+  width: 38%;
+}
+
+.submitform {
+  background: #ffffff;
+  border: 1px solid #000000;
+  margin: 0 auto;
+  padding: 20px 0px 20px 20px;
+  position: relative;
+  text-align: left;
+  width: auto;
+}
+
+label {
+  color: #000000;
+  display: block;
+  font-family: vevey, helvetica, arial, sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+input {
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), 0 1px 0 #fff;
+  color: #555;
+  display: block;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 100%
+  padding: 5px;
+}
+
+textarea {
+  height: 100px;
+  width: 60%;
+}
+
+#submit {
+  background-color: #ffffff;
+  border: 2px solid #000000;
+  box-shadow: 2px 2px 2px #000;
+  color: #000000;
+  display: block;
+  font-family: vevey, helvetica, arial, sans-serif;
+  font-size: 1.1em;
+  padding: 5.5px 0 0px 0px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  top: 1px;
+  width: 70px;
+}
+
+#submit:hover {
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-family: vevey, helvetica, arial, sans-serif;
+  font-size: 1.1em;
+  width: 70px;
+}
+
+#submit:active {
+  color: #ffff00;
+  cursor: pointer;
+  position: relative;
+  text-shadow: 2px 2px #666666;
+  top: 2px;
+}
+
+/* Footer */
+
+footer {
+  background-color: #ffffff;
+  border-top: 2px solid black;
+  bottom: 0%;
+  margin-top: 5px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  z-index: 1000;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer ul li {
+  display: inline;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 0.875em;
+  padding: 10px 40px;
+}
+
+footer a {
+  font-family: helvetica, arial, sans-serif;
+  color: blue;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: orange;
+  font-family: helvetica, arial, sans-serif;
+}

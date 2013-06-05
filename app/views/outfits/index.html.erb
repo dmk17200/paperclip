@@ -1,4 +1,4 @@
-<h1>Listing outfits</h1>
+    <h1>Listing outfits</h1>
 
 <table>
   <tr>
@@ -30,7 +30,11 @@
     <td><%= outfit.style %></td>
     <td><%= link_to 'Show', outfit %></td>
     <% if session[:admin_id].present? %>
-        <td><%= check_box_tag "approved", 1 , outfit.approval  %></td>
+        <td><%= form_tag outfit_path(outfit), method: 'put' do %>
+            <%= check_box_tag "approved", 1 , outfit.approval  %>
+            <%= submit_tag "!" %>
+            <% end %>
+        </td>
         <td><%= link_to 'Edit', edit_outfit_path(outfit) %></td>
         <td><%= link_to 'Destroy', outfit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <td><%= outfit.email %></td>

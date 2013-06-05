@@ -1,5 +1,41 @@
 
-  <%= form_for @outfit,  :html => { :multipart => true } do |f| %>
+    <section class="form">
+    <form action="#" method="blahblah" class="submitform">
+        <label for="name">Name</label>
+            <input type="text" name="name" id="name" required>
+        <label for="emailaddress">Email</label>
+            <input type="email" name="emailaddress" id="emailaddress" required>
+        <label for="website">Website/Blog URL</label>
+            <input type="url" name="website" id="website">
+        <label for="file">Submit a look</label>
+            <input type="file" name="file" id="file" required>
+        <label for="submissiontitle">Title of Image</label>
+            <input type="text" name="submissiontitle" id="submissiontitle" required>
+        <label for="stylecategory">Category</label>
+            <select name="stylecategory" id="stylecategory">
+                <option value="question">Womenswear</option>
+                <option value="comment">Menswear</option>
+            </select>
+        <label for="stylecategory">Trend</label>
+            <select name="stylecategory" id="stylecategory">
+                <option value="work" selected>Preppy</option>
+                <option value="question">Bohemian</option>
+                <option value="comment">Grunge</option>
+                <option value="comment">Bold</option>
+                <option value="comment">Romantic</option>
+                <option value="comment">Vintage</option>
+                <option value="comment">Minimalist</option>
+            </select>
+        <label for="message">What does this look mean to you?</label>
+            <textarea name="message" id="message" required>Tell us why you are submitting this look.</textarea>
+        <input type="submit" name="submit" id="submit" value="Submit">
+    </form>
+
+
+
+
+
+  <%= form_for @outfit,  :html => { :multipart => true, :class => 'submitform' } do |f| %>
 
     <% if @outfit.errors.any? %>
     <div id="error_explanation">
@@ -7,27 +43,36 @@
 
     </div>
   <% end %>
+   <%= f.label "Submit a Look" %>
   <%= f.file_field :photo %>
 
     <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label 'Title of Image' %>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :description %><br />
+    <%= f.label :description %>
     <%= f.text_field :description %>
   </div>
   <div class="field">
-    <%= f.label "Your Name" %><br />
+    <%= f.label "Your Name" %>
     <%= f.text_field :username %>
   </div>
     <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email %>
     <%= f.email_field :email %>
   </div>
     <div class="field">
-    <%= f.label :style %><br />
-    <%= f.text_field :style %>
+    <%= f.label :Trend %>
+            <select name="stylecategory" id="stylecategory">
+              <option value="work" selected>Preppy</option>
+              <option value="question">Bohemian</option>
+              <option value="comment">Grunge</option>
+              <option value="comment">Bold</option>
+              <option value="comment">Romantic</option>
+              <option value="comment">Vintage</option>
+              <option value="comment">Minimalist</option>
+            </select>
   </div>
     <div class="field">
       <% if session[:admin_id].present? %>
@@ -37,11 +82,26 @@
       <% end %>
   </div>
 
-
-
-
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit", :type => 'submit', :id=> 'submit' %>
   </div>
 <% end %>
 
+
+<p>
+
+
+</p>
+    </section>
+        <footer>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">[Facebook Twitter Pinterest]</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+    </footer>
+
+  </body>
+</html>

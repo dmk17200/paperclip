@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html>
-<head> <%= notice %>
+<head>
+    <link type="text/css" rel="stylesheet" href="../css/file.css">
+    <meta charset="utf-8">
+    <title>Para||e|42</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+
+
+  <html lang="en">
+  </head>
+  <body>
+    <header>
+        <a href="index.html"><h1>Parallel 42</h1></a>
+        <nav>
+            <ul>
+                <li><%= link_to "Submit a look", new_outfit_path, class: 'navbutton' %></li>
+                <li><%= link_to "Browse", outfits_url, class: 'navbutton' %></li>
+            </ul>
+        </nav>
+    </header>
+
+
+  <%= notice %>
   <% if session[:admin_id].present? %>
     <%= link_to "Log Out", sessions_url, method: 'delete' %>
     <% else %>
     <%= %>
     <% end %>
-  <title>Phototest</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+
+
 </head>
 <body>
 
