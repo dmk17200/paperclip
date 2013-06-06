@@ -43,6 +43,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
+  font-size: 16px;
 }
 ol, ul {
   list-style: none;
@@ -64,6 +65,8 @@ table {
 
 
 /* Custom Styles */
+
+
 
 
 body {
@@ -115,12 +118,12 @@ ul li {
 
 @font-face {
   font-family: thiamine;
-  src: url('../fonts/thiamine.ttf');
+  src: url('fonts/thiamine.ttf');
 }
 
 @font-face {
   font-family: vevey;
-  src: url('../fonts/vevey.ttf');
+  src: url('fonts/vevey.ttf');
 }
 
 /* Header */
@@ -326,102 +329,7 @@ nav ul li {
 
 /*main page*/
 
-.featuredlook {
-  background: url('../images/cropsweater.jpg') no-repeat;
-  background-size: cover;
-  height: 500px;
-  margin: 0 auto;
-  position: relative;
-  width: 85%;
-}
 
-.stream {
-  margin: 0 auto;
-  padding: 10px;
-  width: 80%;
-}
-
-.femalelook {
-  background: url('../images/bluecoat.jpg') no-repeat;
-  background-size: cover;
-  float: left;
-  height: 450px;
-  opacity: 0.7;
-  position: relative;
-  width: 50%;
-}
-
-.femalelook:hover {
-  opacity: 1.0;
-}
-
-.malelook {
-  background: url('../images/menswear.jpg') no-repeat;
-  background-size: cover;
-  float: left;
-  height: 450px;
-  opacity: 0.7;
-  position: relative;
-  width: 50%;
-}
-
-.malelook:hover {
-  opacity: 1.0;
-}
-
-.featuredbox {
-  background-color: #ffff00;
-  height: 80px;
-  opacity:0.6;
-  padding: 10px;
-  position: absolute;
-  top: 380px;
-  width: 700px;
-}
-
-.infoboxfemale {
-  background-color: #cccccc;
-  height: 110px;
-  opacity:0.9;
-  padding: 10px;
-  position: absolute;
-  right: 15px;
-  top: 260px;
-  width: 200px;
-}
-
-.infoboxmale {
-  background-color: #cccccc;
-  height: 110px;
-  opacity:0.9;
-  padding: 10px;
-  position: absolute;
-  right: 15px;
-  top: 260px;
-  width: 200px;
-}
-
-
-/*Female Look Full Story*/
-
-.fullinfo {
-  background: url('../images/bluecoat.jpg') no-repeat;
-  background-size: cover;
-  height: 700px;
-  margin: 0 auto;
-  position: relative;
-  top: 80px;
-  width: 80%;
-}
-
-.infocontainer {
-  height: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  position: relative;
-  top: 80px;
-  width: 70%
-}
 
 /*Submit Page*/
 
@@ -529,18 +437,18 @@ footer ul {
 
 footer ul li {
   display: inline;
-  font-family: helvetica, arial, sans-serif;
+  font-family: vevey, helvetica, arial, sans-serif;
   font-size: 0.875em;
   padding: 10px 40px;
 }
 
 footer a {
-  font-family: helvetica, arial, sans-serif;
+  font-family: vevey, helvetica, arial, sans-serif;
   color: blue;
   text-decoration: none;
 }
 
 footer a:hover {
   color: orange;
-  font-family: helvetica, arial, sans-serif;
+  font-family: vevey, helvetica, arial, sans-serif;
 }

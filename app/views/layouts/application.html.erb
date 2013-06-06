@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link type="text/css" rel="stylesheet" href="../css/file.css">
+    <link type="text/css" rel="stylesheet" href="application.css">
     <meta charset="utf-8">
     <title>Para||e|42</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-
+ <!-- find out how to place font in head- find on internet - or place it in assets - ie stylesheet_link_tag - point in from assets -->
 
   <html lang="en">
   </head>
   <body>
-    <header>
+    <header class="clearfix">
         <a href="index.html"><h1>Parallel 42</h1></a>
         <nav>
             <ul>
@@ -30,11 +30,16 @@
     <%= %>
     <% end %>
 
+  <%= yield %>
 
-</head>
-<body>
-
-<%= yield %>
-
+  <footer>
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">[Facebook Twitter Pinterest]</a></li>
+      <li><a href="#">Help</a></li>
+      <li><a href="#">Terms & Conditions</a></li>
+    </ul>
+  </footer>
 </body>
 </html>

@@ -1,3 +1,51 @@
-// Place all the styles related to the Outfits controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.featuredlook {
+  background: url('/assets/greencoat.jpg') no-repeat;
+  background-size: cover;
+  height: 500px;
+  margin: 0 auto;
+  position: relative;
+  width: 85%;
+}
+
+.featuredbox {
+  background-color: #ffff00;
+  height: 80px;
+  opacity:0.6;
+  padding: 10px;
+  position: absolute;
+  top: 380px;
+  width: 700px;
+}
+
+.stream {
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.femalelook {
+  float: left;
+  height: 450px;
+  opacity: 0.7;
+  position: relative;
+  overflow: hidden;
+  width: 50%;
+}
+
+.femalelook img {
+  width: 480px;
+}
+
+.infoboxfemale {
+  background-color: #ffffff;
+  height: 110px;
+  opacity:0.8;
+  padding: 10px;
+  position: absolute;
+  right: 15px;
+  top: 260px;
+  width: 200px;
+}
+
+.femalelook:hover {
+  opacity: 1.0;
+}

@@ -1,0 +1,55 @@
+
+  <!--   <h2>Outfit</th>
+    <th>Image</th>
+    <th>Description</th>
+    <th>Username</th>
+    <th>Style</th>
+    <th>See It</th>
+ <% if session[:admin_id].present? %>
+    <th>Approved</th>
+    <th>Edit</th>
+    <th>Destroy</th>
+    <th>Email</th>
+    <th>Piece Selector</th>
+    <th>Existing Pieces</th>
+<% else %>
+    <th>      </th>
+    <% end %>
+
+  </tr>
+
+<% @outfits.each do |outfit| %>
+  <tr>
+    <td><%= image_tag outfit.photo.url (:thumb) %></td>
+    <td><%= outfit.name %></td>
+    <td><%= outfit.description %></td>
+    <td><%= outfit.username %></td>
+    <td><%= outfit.style %></td>
+    <td><%= link_to 'Show', outfit %></td>
+    <% if session[:admin_id].present? %>
+        <td><%= form_tag outfit_path(outfit), method: 'put' do %>
+            <%= check_box_tag "approved", 1 , outfit.approval  %>
+            <%= submit_tag "!" %>
+            <% end %>
+        </td>
+        <td><%= link_to 'Edit', edit_outfit_path(outfit) %></td>
+        <td><%= link_to 'Destroy', outfit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= outfit.email %></td>
+        <td>
+        <%= form_tag pieces_url, method: 'post' do %>
+          <%= select_tag :element_id, options_from_collection_for_select(Element.all, :id, :article) %>
+          <%= hidden_field_tag :outfit_id, outfit.id %>
+          <%= submit_tag "Submit" %>
+        <% end %>
+        </td>
+    <td> <% outfit.pieces.each do |piece| %> <%= piece.element.article %> <% end %> </td>
+    <% else %>
+        <td>        </td>
+    <% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Outfit', new_outfit_path %> -->
