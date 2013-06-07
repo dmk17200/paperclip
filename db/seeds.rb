@@ -5,3 +5,20 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Outfit.destroy_all
+
+admin_hash = [
+  {:name => "danish", :password => "admin"}
+]
+
+Admin.destroy_all
+admin_hash.each do |a_hash|
+  a = Admin.new
+  a.name = a_hash[:name]
+  a.password = a_hash[:password]
+  a.save
+end
+
+Piece.destroy_all
+
